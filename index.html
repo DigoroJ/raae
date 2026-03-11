@@ -3,6 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAAE Financial Services</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -13,26 +14,18 @@
 
 <h1>RAAE</h1>
 
-<!-- HAMBURGER BUTTON -->
-
 <div class="menu-toggle" id="menu-toggle">
 ☰
 </div>
 
 <nav id="nav-menu">
-
 <ul>
-
 <li><a href="#about">About</a></li>
-
-<li><a href="#finance">Who We Finance</a></li>
-
+<li><a href="#distribution">Funding Distribution</a></li>
+<li><a href="#shares">Share Categories</a></li>
 <li><a href="#funding-section">Funding</a></li>
-
 <li><a href="#contact">Contact</a></li>
-
 </ul>
-
 </nav>
 
 </header>
@@ -46,13 +39,9 @@
 <img src="https://picsum.photos/1600/600?1">
 
 <div class="hero-text">
-
 <h2>Flexible Business Loans</h2>
-
 <p>Helping South African SMMEs grow with confidence.</p>
-
 <a href="#funding-section" class="btn">Apply For Funding</a>
-
 </div>
 
 </div>
@@ -62,13 +51,9 @@
 <img src="https://picsum.photos/1600/600?2">
 
 <div class="hero-text">
-
 <h2>Fast Approvals</h2>
-
 <p>Tailored repayment plans for your business.</p>
-
 <a href="#funding-section" class="btn">Get Started</a>
-
 </div>
 
 </div>
@@ -82,48 +67,79 @@
 <h2>About RAAE</h2>
 
 <p>
-
-We are a South African incorporated BEE compliant financial services provider
-
-offering collateral backed flexible business loans to SMMEs.
-
+RAAE is a South African incorporated BEE compliant financial services provider offering collateral backed business loans to SMMEs.
 </p>
 
 </section>
 
-<!-- WHO WE FINANCE -->
+<!-- FUNDING DISTRIBUTION -->
 
-<section id="finance">
+<section id="distribution">
 
-<h2>Who We Finance</h2>
+<h2>Business Funding Distribution</h2>
 
-<table>
+<table class="raae-table">
 
 <tr>
-<th>Share Class</th>
-<th>Price</th>
+<th>Sector</th>
+<th>Estimated Funding %</th>
+</tr>
+
+<tr><td>Retail</td><td>15%</td></tr>
+<tr><td>Manufacturing</td><td>20%</td></tr>
+<tr><td>Agriculture</td><td>30%</td></tr>
+<tr><td>Energy</td><td>15%</td></tr>
+<tr><td>Mining</td><td>10%</td></tr>
+<tr><td>Other</td><td>5%</td></tr>
+<tr><td>Tourism</td><td>5%</td></tr>
+
+</table>
+
+</section>
+
+<!-- SHARE CATEGORIES -->
+
+<section id="shares">
+
+<h2>Share Categories</h2>
+
+<table class="raae-table">
+
+<tr>
+<th>Category</th>
+<th>Value</th>
+<th>Estimated Value</th>
 </tr>
 
 <tr>
-<td>Class A</td>
-<td>R1000</td>
+<td>Platinum</td>
+<td>4600 units @ R2.20</td>
+<td>R10120</td>
 </tr>
 
 <tr>
-<td>Class B</td>
-<td>R5000</td>
+<td>Gold</td>
+<td>2280 units @ R2.20</td>
+<td>R5016</td>
 </tr>
 
 <tr>
-<td>Class C</td>
-<td>R10000</td>
+<td>Silver</td>
+<td>1370 units @ R2.20</td>
+<td>R3014</td>
+</tr>
+
+<tr>
+<td>Bronze</td>
+<td>460 units @ R2.20</td>
+<td>R1012</td>
 </tr>
 
 </table>
 
 </section>
 
-<!-- FUNDING SECTION -->
+<!-- FUNDING -->
 
 <section id="funding-section">
 
@@ -146,17 +162,11 @@ offering collateral backed flexible business loans to SMMEs.
 <input type="tel" placeholder="Contact Number">
 
 <select>
-
 <option>Select Sector</option>
-
 <option>Agriculture</option>
-
 <option>Manufacturing</option>
-
 <option>Technology</option>
-
 <option>Retail</option>
-
 </select>
 
 <input type="number" placeholder="Required Funding">
@@ -178,9 +188,7 @@ offering collateral backed flexible business loans to SMMEs.
 <input type="number" id="years" placeholder="Years in Business">
 
 <button class="btn" onclick="calculateFunding()">
-
 Check Eligibility
-
 </button>
 
 <h3 id="result"></h3>
@@ -222,17 +230,12 @@ Check Eligibility
 <h3>Office Details</h3>
 
 <p><strong>Phone:</strong> 071 441 6325</p>
-
 <p><strong>Email:</strong> oregolele.ai@workmail.co.za</p>
 
 <p>
-
 Terman Office Block<br>
-
 Erf 818 264 266 West Street<br>
-
 Pretoria North
-
 </p>
 
 </div>
@@ -252,13 +255,11 @@ Pretoria North
 /* HERO SLIDER */
 
 let slides = document.querySelectorAll(".hero-slide")
-
 let index = 0
 
 setInterval(function(){
 
 slides.forEach(slide => slide.classList.remove("active"))
-
 slides[index].classList.add("active")
 
 index++
@@ -293,15 +294,13 @@ document.getElementById("result").innerHTML =
 
 }
 
-/* HAMBURGER MENU */
+/* MOBILE MENU */
 
 let toggle = document.getElementById("menu-toggle")
 let nav = document.getElementById("nav-menu")
 
 toggle.addEventListener("click", function(){
-
 nav.classList.toggle("active")
-
 })
 
 </script>

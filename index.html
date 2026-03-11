@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>RAAE Financial Services</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>RAAE</h1>
+
+<!-- HAMBURGER BUTTON -->
+
+<div class="menu-toggle" id="menu-toggle">
+☰
+</div>
+
+<nav id="nav-menu">
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#finance">Who We Finance</a></li>
+
+<li><a href="#funding-section">Funding</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-slide active">
+
+<img src="https://picsum.photos/1600/600?1">
+
+<div class="hero-text">
+
+<h2>Flexible Business Loans</h2>
+
+<p>Helping South African SMMEs grow with confidence.</p>
+
+<a href="#funding-section" class="btn">Apply For Funding</a>
+
+</div>
+
+</div>
+
+<div class="hero-slide">
+
+<img src="https://picsum.photos/1600/600?2">
+
+<div class="hero-text">
+
+<h2>Fast Approvals</h2>
+
+<p>Tailored repayment plans for your business.</p>
+
+<a href="#funding-section" class="btn">Get Started</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About RAAE</h2>
+
+<p>
+
+We are a South African incorporated BEE compliant financial services provider
+
+offering collateral backed flexible business loans to SMMEs.
+
+</p>
+
+</section>
+
+<!-- WHO WE FINANCE -->
+
+<section id="finance">
+
+<h2>Who We Finance</h2>
+
+<table>
+
+<tr>
+<th>Share Class</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>Class A</td>
+<td>R1000</td>
+</tr>
+
+<tr>
+<td>Class B</td>
+<td>R5000</td>
+</tr>
+
+<tr>
+<td>Class C</td>
+<td>R10000</td>
+</tr>
+
+</table>
+
+</section>
+
+<!-- FUNDING SECTION -->
+
+<section id="funding-section">
+
+<h2>Enterprise Funding</h2>
+
+<div class="funding-layout">
+
+<div class="funding-box">
+
+<h3>Apply For Funding</h3>
+
+<form>
+
+<input type="text" placeholder="Business Name">
+
+<input type="text" placeholder="Registration Number">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Contact Number">
+
+<select>
+
+<option>Select Sector</option>
+
+<option>Agriculture</option>
+
+<option>Manufacturing</option>
+
+<option>Technology</option>
+
+<option>Retail</option>
+
+</select>
+
+<input type="number" placeholder="Required Funding">
+
+<button class="btn">Submit Application</button>
+
+</form>
+
+</div>
+
+<div class="funding-box">
+
+<h3>Funding Eligibility</h3>
+
+<input type="number" id="revenue" placeholder="Monthly Revenue">
+
+<input type="number" id="expenses" placeholder="Monthly Expenses">
+
+<input type="number" id="years" placeholder="Years in Business">
+
+<button class="btn" onclick="calculateFunding()">
+
+Check Eligibility
+
+</button>
+
+<h3 id="result"></h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-container">
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Phone">
+
+<textarea placeholder="Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+</form>
+
+</div>
+
+<div class="contact-info">
+
+<h3>Office Details</h3>
+
+<p><strong>Phone:</strong> 071 441 6325</p>
+
+<p><strong>Email:</strong> oregolele.ai@workmail.co.za</p>
+
+<p>
+
+Terman Office Block<br>
+
+Erf 818 264 266 West Street<br>
+
+Pretoria North
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 RAAE Financial Services</p>
+
+</footer>
+
+<script>
+
+/* HERO SLIDER */
+
+let slides = document.querySelectorAll(".hero-slide")
+
+let index = 0
+
+setInterval(function(){
+
+slides.forEach(slide => slide.classList.remove("active"))
+
+slides[index].classList.add("active")
+
+index++
+
+if(index === slides.length){
+index = 0
+}
+
+},5000)
+
+/* FUNDING CALCULATOR */
+
+function calculateFunding(){
+
+let revenue = document.getElementById("revenue").value
+let expenses = document.getElementById("expenses").value
+let years = document.getElementById("years").value
+
+let profit = revenue - expenses
+let funding = profit * 6
+
+if(years < 1){
+
+document.getElementById("result").innerHTML =
+"Business must operate for at least 1 year"
+
+return
+}
+
+document.getElementById("result").innerHTML =
+"Estimated Funding Eligibility: R " + funding
+
+}
+
+/* HAMBURGER MENU */
+
+let toggle = document.getElementById("menu-toggle")
+let nav = document.getElementById("nav-menu")
+
+toggle.addEventListener("click", function(){
+
+nav.classList.toggle("active")
+
+})
+
+</script>
+
+</body>
+</html>

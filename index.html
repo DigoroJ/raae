@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +10,8 @@
 <body>
 
 <header>
-
 <h1>RAAE</h1>
-
-<div class="menu-toggle" id="menu-toggle">
-☰
-</div>
+<div class="menu-toggle" id="menu-toggle">☰</div>
 
 <nav id="nav-menu">
 <ul>
@@ -27,283 +22,104 @@
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
-
 </header>
 
 <!-- HERO -->
-
 <section class="hero">
-
 <div class="hero-slide active">
-
 <img src="https://picsum.photos/1600/600?1">
-
 <div class="hero-text">
 <h2>Flexible Business Loans</h2>
 <p>Helping South African SMMEs grow with confidence.</p>
 <a href="#funding-section" class="btn">Apply For Funding</a>
 </div>
-
 </div>
 
 <div class="hero-slide">
-
 <img src="https://picsum.photos/1600/600?2">
-
 <div class="hero-text">
 <h2>Fast Approvals</h2>
 <p>Tailored repayment plans for your business.</p>
 <a href="#funding-section" class="btn">Get Started</a>
 </div>
-
 </div>
-
 </section>
 
 <!-- ABOUT -->
-
 <section id="about">
-
 <h2>About RAAE</h2>
-
 <p>
 RAAE is a South African incorporated BEE compliant financial services provider offering collateral backed business loans to SMMEs.
 </p>
-
-</section>
-
-<!-- FUNDING DISTRIBUTION -->
-
-<section id="distribution">
-
-<h2>Business Funding Distribution</h2>
-
-<table class="raae-table">
-
-<tr>
-<th>Sector</th>
-<th>Estimated Funding %</th>
-</tr>
-
-<tr><td>Retail</td><td>15%</td></tr>
-<tr><td>Manufacturing</td><td>20%</td></tr>
-<tr><td>Agriculture</td><td>30%</td></tr>
-<tr><td>Energy</td><td>15%</td></tr>
-<tr><td>Mining</td><td>10%</td></tr>
-<tr><td>Other</td><td>5%</td></tr>
-<tr><td>Tourism</td><td>5%</td></tr>
-
-</table>
-
-</section>
-
-<!-- SHARE CATEGORIES -->
-
-<section id="shares">
-
-<h2>Share Categories</h2>
-
-<table class="raae-table">
-
-<tr>
-<th>Category</th>
-<th>Value</th>
-<th>Estimated Value</th>
-</tr>
-
-<tr>
-<td>Platinum</td>
-<td>4600 units @ R2.20</td>
-<td>R10120</td>
-</tr>
-
-<tr>
-<td>Gold</td>
-<td>2280 units @ R2.20</td>
-<td>R5016</td>
-</tr>
-
-<tr>
-<td>Silver</td>
-<td>1370 units @ R2.20</td>
-<td>R3014</td>
-</tr>
-
-<tr>
-<td>Bronze</td>
-<td>460 units @ R2.20</td>
-<td>R1012</td>
-</tr>
-
-</table>
-
 </section>
 
 <!-- FUNDING -->
-
 <section id="funding-section">
-
 <h2>Enterprise Funding</h2>
 
 <div class="funding-layout">
 
+<!-- APPLY FORM -->
 <div class="funding-box">
-
 <h3>Apply For Funding</h3>
 
-<form>
+<form id="fundingForm">
+<input id="businessName" type="text" placeholder="Business Name" required>
+<input id="registrationNumber" type="text" placeholder="Registration Number" required>
+<input id="email" type="email" placeholder="Email" required>
+<input id="contactNumber" type="tel" placeholder="Contact Number" required>
 
-<input type="text" placeholder="Business Name">
-
-<input type="text" placeholder="Registration Number">
-
-<input type="email" placeholder="Email">
-
-<input type="tel" placeholder="Contact Number">
-
-<select>
-<option>Select Sector</option>
+<select id="sector" required>
+<option value="">Select Sector</option>
 <option>Agriculture</option>
 <option>Manufacturing</option>
 <option>Technology</option>
 <option>Retail</option>
 </select>
 
-<input type="number" placeholder="Required Funding">
+<input id="requiredFunding" type="number" placeholder="Required Funding" required>
 
-<button class="btn">Submit Application</button>
-
+<button type="submit" class="btn">Submit Application</button>
 </form>
-
 </div>
 
+<!-- ELIGIBILITY -->
 <div class="funding-box">
-
 <h3>Funding Eligibility</h3>
 
 <input type="number" id="revenue" placeholder="Monthly Revenue">
-
 <input type="number" id="expenses" placeholder="Monthly Expenses">
-
 <input type="number" id="years" placeholder="Years in Business">
 
-<button class="btn" onclick="calculateFunding()">
-Check Eligibility
-</button>
+<button class="btn" onclick="calculateFunding()">Check Eligibility</button>
 
 <h3 id="result"></h3>
-
 </div>
 
 </div>
-
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact">
-
 <h2>Contact Us</h2>
 
-<div class="contact-container">
+<form id="contactForm">
+<input id="name" type="text" placeholder="Name" required>
+<input id="contactEmail" type="email" placeholder="Email" required>
+<input id="phone" type="tel" placeholder="Phone">
+<textarea id="message" placeholder="Message" required></textarea>
 
-<div class="contact-form">
-
-<form>
-
-<input type="text" placeholder="Name">
-
-<input type="email" placeholder="Email">
-
-<input type="tel" placeholder="Phone">
-
-<textarea placeholder="Message"></textarea>
-
-<button class="btn">Send Message</button>
-
+<button type="submit" class="btn">Send Message</button>
 </form>
-
-</div>
-
-<div class="contact-info">
-
-<h3>Office Details</h3>
-
-<p><strong>Phone:</strong> 071 441 6325</p>
-<p><strong>Email:</strong> oregolele.ai@workmail.co.za</p>
-
-<p>
-Terman Office Block<br>
-Erf 818 264 266 West Street<br>
-Pretoria North
-</p>
-
-</div>
-
-</div>
 
 </section>
 
 <footer>
-
 <p>© 2026 RAAE Financial Services</p>
-
 </footer>
 
-<script>
-
-/* HERO SLIDER */
-
-let slides = document.querySelectorAll(".hero-slide")
-let index = 0
-
-setInterval(function(){
-
-slides.forEach(slide => slide.classList.remove("active"))
-slides[index].classList.add("active")
-
-index++
-
-if(index === slides.length){
-index = 0
-}
-
-},5000)
-
-/* FUNDING CALCULATOR */
-
-function calculateFunding(){
-
-let revenue = document.getElementById("revenue").value
-let expenses = document.getElementById("expenses").value
-let years = document.getElementById("years").value
-
-let profit = revenue - expenses
-let funding = profit * 6
-
-if(years < 1){
-
-document.getElementById("result").innerHTML =
-"Business must operate for at least 1 year"
-
-return
-}
-
-document.getElementById("result").innerHTML =
-"Estimated Funding Eligibility: R " + funding
-
-}
-
-/* MOBILE MENU */
-
-let toggle = document.getElementById("menu-toggle")
-let nav = document.getElementById("nav-menu")
-
-toggle.addEventListener("click", function(){
-nav.classList.toggle("active")
-})
-
-</script>
+<!-- LINK JS FILE -->
+<script type="module" src="script.js"></script>
 
 </body>
 </html>

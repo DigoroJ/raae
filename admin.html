@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAAE Admin Dashboard</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+header {
+  background: #0b3d5c;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: #0b3d5c;
+  color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>RAAE Admin Dashboard</h1>
+</header>
+
+<div class="container">
+
+<!-- APPLICATIONS -->
+<div class="card">
+<h2>Funding Applications</h2>
+<table id="applicationsTable">
+<thead>
+<tr>
+<th>Business</th>
+<th>Email</th>
+<th>Sector</th>
+<th>Funding</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+<!-- MESSAGES -->
+<div class="card">
+<h2>Contact Messages</h2>
+<table id="messagesTable">
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+</html>
